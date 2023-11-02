@@ -1,13 +1,15 @@
 //Todo fix warning witch svg?url
-import { Transition } from "@headlessui/react";
+
+import { PopoverTrigger } from "@radix-ui/react-popover";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import NavbarFilterIcon from "@/shared/assets/icons/navbarFiltersLogo.svg?url";
 import NavigationLogo from "@/shared/assets/icons/paspartu-logo.svg?url";
 import NavigationPaspartuTitle from "@/shared/assets/icons/paspartuNavTitle.svg?url";
 import { AppRouter } from "@/shared/const/route";
-import { HPopover } from "@/shared/ui/popover";
+import { Button } from "@/shared/ui/button";
+import { Popover, PopoverContent } from "@/shared/ui/popover";
+import { Separator } from "@/shared/ui/separator";
 import { headerItems } from "../model/headerItem";
 import { HeaderItemPopover } from "./headerItemPopover";
 //Todo create feature filters
@@ -26,9 +28,20 @@ export const Header = () => {
           </Link>
         </div>
 
-        <HPopover trigger={<Image src={NavbarFilterIcon} alt="filterIcon" />}>
-          <HeaderItemPopover items={headerItems} />
-        </HPopover>
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button variant={"outline"}>
+              <Image src={NavbarFilterIcon} alt="navbarFilterIcon" />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-64 mr-4">
+            <div className="grid gap-4">
+              <div className="space-y-2">
+                <HeaderItemPopover items={headerItems} />
+              </div>
+            </div>
+          </PopoverContent>
+        </Popover>
       </nav>
     </header>
   );
