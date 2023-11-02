@@ -1,3 +1,11 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "@feature-sliced/eslint-config/rules/import-order",
+    "@feature-sliced/eslint-config/rules/public-api",
+    "@feature-sliced/eslint-config/rules/layers-slices"
+  ],
+  "rules": {
+    "import/no-internal-modules": "off"
+  }
 }
