@@ -1,13 +1,14 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
-import { Header } from "@/widgets";
+import { Header, SearchBar } from "@/widgets";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export function HomePage() {
   return (
-    <div className="w-screen h-screen ">
+    <div className="w-full">
       <Header />
+      <SearchBar />
     </div>
   );
 }
