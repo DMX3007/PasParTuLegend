@@ -17,7 +17,7 @@ import { HeaderItemPopover } from "./headerItemPopover";
 export const Header = () => {
   return (
     //Todo add border bottom header ? border-solid border-2 border-y-gray-400 rounded-lg
-    <header className="w-screen h-24 px-4">
+    <header className="h-24">
       <nav className="flex items-center justify-between ">
         <div className="flex items-center">
           <Link href={AppRouter.main}>
@@ -30,11 +30,11 @@ export const Header = () => {
 
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant={"outline"}>
+            <Button variant={"outline"} className={"rounded-3xl"}>
               <Image src={NavbarFilterIcon} alt="navbarFilterIcon" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-64 mr-4">
+          <PopoverContent className="w-64 mr-2 rounded-xl">
             <div className="grid gap-4">
               <div className="space-y-2">
                 <HeaderItemPopover items={headerItems} />
@@ -46,9 +46,3 @@ export const Header = () => {
     </header>
   );
 };
-
-// <div id="mobile-menu-button" className="group peer">
-//   <div className="relative top-0 h-1 w-8 rounded-full bg-black  transition-all group-open:top-2 group-open:rotate-45"></div>
-//   <div className="mt-1 h-1 w-8 rounded-full bg-black opacity-100 transition-all group-open:opacity-0"></div>
-//   <div className="relative top-0 mt-1 h-1 w-8 rounded-full bg-black  transition-all group-open:-top-2 group-open:-rotate-45"></div>
-// </div>
