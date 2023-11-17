@@ -4,9 +4,5 @@ import { Header } from "@/widgets";
 const inter = Inter({ subsets: ["latin"] });
 
 export function HomePage() {
-  return (
-    <div className="w-screen h-screen ">
-      <Header />
-    </div>
-  );
+  return <div className="w-full h-screen"></div>;
 }
