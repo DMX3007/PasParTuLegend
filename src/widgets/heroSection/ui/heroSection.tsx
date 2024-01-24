@@ -1,47 +1,54 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import PaspartuMainImage from '@/shared/assets/pictures/1.png'
+import EgyptImage from '@/shared/assets/pictures/egypt.png';
+import MaldImage from '@/shared/assets/pictures/maldives.png';
+import FranceImage from '@/shared/assets/pictures/paris.png';
+import RomeImage from '@/shared/assets/pictures/rome.png';
+import { EmblaCarousel } from "@/shared/ui/carousel/carousel";
 import { DecorativeImage } from '@/shared/ui/decorativeImage/decorativeImage';
 import { MainProps } from "../types/types";
 
 export const HeroSection = ({ font }: MainProps): JSX.Element => {
+
   return (
-    <div className={"flex justify-center"}>
-      <DecorativeImage
-        className={"mr-[-50px] shadow-[15px_-25px_1px_1px_rgba(105, 193, 179, 1),2px_2px_9px_rgb(183,178,178)] rotate-[5deg] transition-all duration-[0.8s] ease-[ease] mt-[100px] hover:shadow-[0px_0px_0px_0px_rgba(105, 193, 179, 1)] hover:transition-all hover:duration-[0.8s] hover:ease-[ease] hover:translate-x-[15px] hover:translate-y-[-25px];"}
-        text="париж"
-        src="/src/shared/assets/pictures/eiffel_tiny.jpeg"
-        alt="Париж"
-      />
-      <DecorativeImage
-        className={"shadow-[15px_25px_1px_1px_rgba(236, 226, 177, 1),-2px_-2px_9px_rgb(183,178,178)] rotate-[5deg] transition-all duration-[0.8s] ease-[ease] mr-5 mt-[210px] hover:shadow-[0px_0px_0px_0px_rgba(236, 226, 177, 1)] hover:transition-all hover:duration-[0.8s] hover:ease-[ease] hover:translate-x-[15px] hover:translate-y-[25px]"}
-        text="ницца"
-        src="/src/shared/assets/pictures/turkish.jpeg"
-        alt="Ницца"
-      />
-      <Image
-        className={"mt-4vh"}
-        src="/src/shared/assets/pictures/main-logo.png"
-        width={400}
-        height={400}
-        sizes="100vw"
-        alt="туристическое агентство Паспарту логотип"
-        priority
-        style={{
-          objectFit: 'contain',
-          width: 'auto', height: 'auto', minHeight: '200px', minWidth: '200px', maxWidth: '400px', maxHeight: '400px'
-        }}
-      ></Image>
-      <DecorativeImage
-        className={"shadow-[-15px_-25px_1px_1px_rgba(105, 193, 179, 1);,2px_2px_9px_rgb(183,178,178)] rotate-[5deg] transition-all duration-[0.8s] ease-[ease] mt-[95px] hover:shadow-[0px_0px_0px_0px_rgba(105, 193, 179, 1);] hover:transition-all hover:duration-[0.8s] hover:ease-[ease] hover:delay-[forwards] hover:translate-x-[-15px] hover:translate-y-[-25px]"}
-        text="мале"
-        src="/src/shared/assets/pictures/mald.jpeg"
-        alt="Мале"
-      />
-      <DecorativeImage
-        className={"ml-[-50px] shadow-[15px_-25px_1px_1px_rgba(239,198,128,1),2px_2px_9px_rgb(183,178,178)] rotate-[5deg] transition-all duration-[0.8s] ease-[ease] mt-[250px] hover:shadow-[0px_0px_0px_0px_rgba(239,198,128,1)] hover:transition-all hover:duration-[0.8s] hover:ease-[ease] hover:translate-x-[15px] hover:translate-y-[-25px]"}
-        text="пхукет"
-        src="/src/shared/assets/pictures/phuket.jpg"
-        alt="Пхукет"
-      />
+    <div className={"grid grid-cols-3"}>
+      <div className={"flex flex-col justify-between justify-self-end shrink-0"}>
+        <DecorativeImage
+          className={"justify-self-center rotate-12 shadow-lg shadow-slate-400 mr-4"}
+          text="париж"
+          src={FranceImage}
+          alt="мультипликационное изображение города Париж"
+        />
+        <DecorativeImage
+          src={EgyptImage}
+          className={'-rotate-12 shadow-amber-800'}
+          text="Гиза"
+          alt={"мультипликационное изображение города Гиза"}
+        />
+      </div>
+      <div className="rounded-lg bg-white justify-self-center shadow-lg shadow-slate-400">
+        <div className="bg-slate-600" style={{ clipPath: 'circle(45.2%)' }}>
+          <video className="transform scale-.5 rounded-full justify-self-center " style={{ clipPath: 'circle(45.1%)' }} width="520" height="320" autoPlay muted loop>
+            <source src="video/video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <div className={"flex flex-col justify-between justify-self-start"}>
+        <DecorativeImage
+          className={'shrink-0 rotate-12 shadow-cyan-500 ml-4'}
+          text="Мале"
+          src={MaldImage}
+          alt="мультипликационное изображение города Мале"
+        />
+        <DecorativeImage
+          className={'shrink-0 rotate-12 shadow-amber-800 ml-4'}
+          text="Рим"
+          src={RomeImage}
+          alt="мультипликационное изображение города Рим"
+        />
+      </div>
     </div >
   );
 };
+
