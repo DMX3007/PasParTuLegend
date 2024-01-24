@@ -3,7 +3,7 @@
 import { PopoverTrigger } from "@radix-ui/react-popover";
 import Image from "next/image";
 import Link from "next/link";
-import NavigationLogo from "@/shared/assets/icons/paspartu-logo.svg?url";
+import NavigationLogo from "@/shared/assets/icons/paspartu-logo.png";
 import NavbarFilterIcon from "@/shared/assets/icons/navbarFiltersLogo.svg?url";
 import NavigationPaspartuTitle from "@/shared/assets/icons/paspartuNavTitle.svg?url";
 import { AppRouter } from "@/shared/const/route";
@@ -21,7 +21,7 @@ export const Header = () => {
       <nav className="flex items-center justify-between ">
         <div className="flex items-center">
           <Link href={AppRouter.main}>
-            <Image src={NavigationLogo} alt="logo" className="cursor-pointer" />
+            <Image src={NavigationLogo} width={65} height={65} alt="logo" className="cursor-pointer" />
           </Link>
           <Link href={AppRouter.main}>
             <h2 className={"text-[#36747E]"}>

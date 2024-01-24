@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import PaspartuLogo from "@/shared/assets/icons/paspartu-logo.png";
 import PaspartuMainImage from '@/shared/assets/pictures/1.png'
 import EgyptImage from '@/shared/assets/pictures/egypt.png';
 import MaldImage from '@/shared/assets/pictures/maldives.png';
@@ -7,6 +8,8 @@ import RomeImage from '@/shared/assets/pictures/rome.png';
 import { EmblaCarousel } from "@/shared/ui/carousel/carousel";
 import { DecorativeImage } from '@/shared/ui/decorativeImage/decorativeImage';
 import { MainProps } from "../types/types";
+import Link from "next/link";
+import { AppRouter } from "@/shared/const/route";
 
 export const HeroSection = ({ font }: MainProps): JSX.Element => {
 
@@ -19,6 +22,15 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
           src={FranceImage}
           alt="мультипликационное изображение города Париж"
         />
+        <Link href={AppRouter.main}>
+          <DecorativeImage
+            src={PaspartuLogo}
+            className={'transform rotate-[05deg] translate-y-1 shadow-amber-800'}
+            text="ПасПарТу"
+            alt={"Обратная сторона карточки с логотипом Паспарту"}
+            back
+          />
+        </Link>
         <DecorativeImage
           src={EgyptImage}
           className={'-rotate-12 shadow-amber-800'}
