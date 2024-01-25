@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export function HomePage() {
   return (
-    <div className="w-full bg-[#ffffff]">
+    <div className="w-full bg-[#ffffff] ">
       <Header />
       <HeroSection font="" />
     </div>
