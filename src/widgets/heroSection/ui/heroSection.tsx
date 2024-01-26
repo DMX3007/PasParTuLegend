@@ -1,6 +1,6 @@
-import { Info, HelpCircle, Star, Globe } from 'lucide-react'
-import Image, { StaticImageData } from "next/image";
+import { Info, HelpCircle, Star, Globe, Flame } from 'lucide-react'
 import Link from "next/link";
+import FlameIcon from "@/shared/assets/icons/flame"
 import PaspartuLogo from "@/shared/assets/icons/paspartu-logo.png";
 import PaspartuMainImage from '@/shared/assets/pictures/1.png'
 import EgyptImage from '@/shared/assets/pictures/egypt.png';
@@ -22,7 +22,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
           src={FranceImage}
           alt="мультипликационное изображение города Париж"
         />
-        {/* <div className='m-auto'>
+        <div className='mr-2'>
           <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
@@ -35,22 +35,15 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
           <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
-              className={'hover:bg-[#e9d9c2] active:bg-[#e6ceae] focus:outline-none focus:ring  focus:ring-violet-300 shadow-amber-800 '}
-              text="Отзывы"
-              alt={"Отзывы"}
-              back={<Star className=' hover:animate-spin' color='#773d06' />}
-            />
-          </Link>
-          <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
-            <DecorativeImage
-              src={PaspartuLogo}
               className={'rounded-es-2xl rounded-ee-2xl  hover:bg-[#e9d9c2] active:bg-[#e6ceae] focus:outline-none focus:ring focus:ring-violet-300 shadow-amber-800 '}
-              text="О нас"
-              alt={"О нас"}
-              back={<HelpCircle className=' hover:animate-spin' color='#773d06' />}
+              text="Горячее"
+              alt={"Горячее"}
+              // back={<Flame className=' hover:' color='#773d06' />}
+              back={<FlameIcon />}
             />
           </Link>
-        </div> */}
+        </div>
+
         <DecorativeImage
           src={EgyptImage}
           className={'-rotate-12 shadow-amber-800'}
@@ -61,34 +54,25 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
       </div>
       <div className="rounded-full bg-white shadow-lg shadow-slate-400 justify-self-center max-w-[425px] max-h-[425px] ">
         <div className="bg-slate-600" style={{ clipPath: 'circle(45.2%)' }}>
-          <video className="rounded-full justify-self-center min-w-[300px]"
+          <video width={520} height={480} className="rounded-full justify-self-center min-w-[300px] max-w-[300px] sm:max-w-[400px]"
             style={{ clipPath: 'circle(45.1%)' }} autoPlay muted loop>
             <source src="video/vid.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
 
-      <div className={"flex flex-col justify-between justify-self-center sm:justify-self-start"}>
+      <div className={"flex flex-col justify-between justify-self-center sm:justify-self-center"}>
         <DecorativeImage
           className={'shrink-0 -rotate-12 shadow-cyan-500'}
           text="Мале"
           src={MaldImage}
           alt="мультипликационное изображение города Мале"
         />
-        {/* <div className='m-auto'>
+        <div className='m-auto'>
           <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
-              className={'rounded-ss-2xl rounded-se-2xl  hover:bg-[#e9d9c2] active:bg-[#e6ceae] m-auto focus:outline-none focus:ring focus:ring-violet-300 shadow-amber-800 '}
-              text="О нас"
-              alt={"О нас"}
-              back={<HelpCircle className=' hover:animate-spin' color='#773d06' />}
-            />
-          </Link>
-          <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
-            <DecorativeImage
-              src={PaspartuLogo}
-              className={'hover:bg-[#e9d9c2] active:bg-[#e6ceae] m-auto focus:outline-none focus:ring  focus:ring-violet-300 shadow-amber-800 '}
+              className={'rounded-ss-2xl rounded-se-2xl hover:bg-[#e9d9c2] active:bg-[#e6ceae] m-auto focus:outline-none focus:ring focus:ring-violet-300 shadow-amber-800 '}
               text="Отзывы"
               alt={"Отзывы"}
               back={<Star className=' hover:animate-spin' color='#773d06' />}
@@ -97,13 +81,13 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
           <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
-              className={'rounded-es-2xl rounded-ee-2xl hover:bg-[#e9d9c2] active:bg-[#e6ceae] m-auto focus:outline-none focus:ring focus:ring-violet-300 shadow-amber-800 '}
-              text="туры"
-              alt={"Обратная сторона карточки с логотипом Паспарту"}
-              back={<Globe className=' hover:animate-spin' color='#773d06' />}
+              className={'rounded-es-2xl rounded-ee-2xl hover:bg-[#e9d9c2] active:bg-[#e6ceae] m-auto focus:outline-none focus:ring  focus:ring-violet-300 shadow-amber-800 hover:'}
+              text="О нас"
+              alt={"О нас"}
+              back={<Info className=' hover:animate-spin' color='#773d06' />}
             />
           </Link>
-        </div> */}
+        </div>
         <DecorativeImage
           className={'shrink-0 rotate-12 shadow-amber-800'}
           text="Рим"
