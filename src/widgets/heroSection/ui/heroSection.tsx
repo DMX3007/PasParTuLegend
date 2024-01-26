@@ -14,16 +14,16 @@ import { MainProps } from "../types/types";
 export const HeroSection = ({ font }: MainProps): JSX.Element => {
 
   return (
-    <div className={"grid grid-cols-3 bg-[url('./../../shared/assets/pictures/header_bl_back.jpg')] bg-cover bg-center"}>
-      <div className={"flex flex-col justify-between justify-self-end"}>
+    <div className={"grid grid-cols-3 gap-10 bg-[url('./../../shared/assets/pictures/header_bl_back.jpg')] bg-cover bg-center"}>
+      <div className={"flex flex-col justify-between justify-self-center"}>
         <DecorativeImage
           className={"justify-self-center rotate-12 shadow-lg shadow-slate-400"}
           text="париж"
           src={FranceImage}
           alt="мультипликационное изображение города Париж"
         />
-        <div className='m-auto'>
-          <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+        {/* <div className='m-auto'>
+          <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
               className={' rounded-ss-2xl rounded-se-2xl hover:bg-[#e9d9c2] active:bg-[#e6ceae] focus:outline-none focus:ring focus:ring-violet-300 shadow-amber-800 '}
@@ -32,7 +32,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
               back={<Globe className=' hover:animate-spin' color='#773d06' />}
             />
           </Link>
-          <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+          <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
               className={'hover:bg-[#e9d9c2] active:bg-[#e6ceae] focus:outline-none focus:ring  focus:ring-violet-300 shadow-amber-800 '}
@@ -41,7 +41,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
               back={<Star className=' hover:animate-spin' color='#773d06' />}
             />
           </Link>
-          <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+          <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
               className={'rounded-es-2xl rounded-ee-2xl  hover:bg-[#e9d9c2] active:bg-[#e6ceae] focus:outline-none focus:ring focus:ring-violet-300 shadow-amber-800 '}
@@ -50,7 +50,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
               back={<HelpCircle className=' hover:animate-spin' color='#773d06' />}
             />
           </Link>
-        </div>
+        </div> */}
         <DecorativeImage
           src={EgyptImage}
           className={'-rotate-12 shadow-amber-800'}
@@ -59,9 +59,10 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
         />
 
       </div>
-      <div className="rounded-full bg-white shadow-lg shadow-slate-400 justify-self-center">
+      <div className="rounded-full bg-white shadow-lg shadow-slate-400 justify-self-center max-w-[425px] max-h-[425px] ">
         <div className="bg-slate-600" style={{ clipPath: 'circle(45.2%)' }}>
-          <video className="rounded-full justify-self-center" style={{ clipPath: 'circle(45.1%)' }} width="520" height="320" autoPlay muted loop>
+          <video className="rounded-full justify-self-center min-w-[300px]"
+            style={{ clipPath: 'circle(45.1%)' }} autoPlay muted loop>
             <source src="video/vid.mp4" type="video/mp4" />
           </video>
         </div>
@@ -69,13 +70,13 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
 
       <div className={"flex flex-col justify-between justify-self-center sm:justify-self-start"}>
         <DecorativeImage
-          className={'shrink-0 -rotate-12 shadow-cyan-500 ml-5'}
+          className={'shrink-0 -rotate-12 shadow-cyan-500'}
           text="Мале"
           src={MaldImage}
           alt="мультипликационное изображение города Мале"
         />
-        <div>
-          <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+        {/* <div className='m-auto'>
+          <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
               className={'rounded-ss-2xl rounded-se-2xl  hover:bg-[#e9d9c2] active:bg-[#e6ceae] m-auto focus:outline-none focus:ring focus:ring-violet-300 shadow-amber-800 '}
@@ -84,7 +85,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
               back={<HelpCircle className=' hover:animate-spin' color='#773d06' />}
             />
           </Link>
-          <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+          <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
               className={'hover:bg-[#e9d9c2] active:bg-[#e6ceae] m-auto focus:outline-none focus:ring  focus:ring-violet-300 shadow-amber-800 '}
@@ -93,7 +94,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
               back={<Star className=' hover:animate-spin' color='#773d06' />}
             />
           </Link>
-          <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+          <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
             <DecorativeImage
               src={PaspartuLogo}
               className={'rounded-es-2xl rounded-ee-2xl hover:bg-[#e9d9c2] active:bg-[#e6ceae] m-auto focus:outline-none focus:ring focus:ring-violet-300 shadow-amber-800 '}
@@ -102,9 +103,9 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
               back={<Globe className=' hover:animate-spin' color='#773d06' />}
             />
           </Link>
-        </div>
+        </div> */}
         <DecorativeImage
-          className={'shrink-0 rotate-12 shadow-amber-800 ml-4'}
+          className={'shrink-0 rotate-12 shadow-amber-800'}
           text="Рим"
           src={RomeImage}
           alt="мультипликационное изображение города Рим"
