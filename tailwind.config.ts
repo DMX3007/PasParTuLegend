@@ -12,6 +12,9 @@ module.exports = {
     fill: ["hover", "focus"], // this line does the trick
   },
   theme: {
+    screens: {
+      mob: "500px",
+    },
     container: {
       center: true,
       padding: "2rem",
