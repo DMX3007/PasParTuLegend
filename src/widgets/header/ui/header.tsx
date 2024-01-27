@@ -1,5 +1,4 @@
 //Todo fix warning with svg?url
-
 import { PopoverTrigger } from "@radix-ui/react-popover";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,9 +50,3 @@ export const Header = () => {
     </header>
   );
 };
-
-// <div id="mobile-menu-button" className="group peer">
-//   <div className="relative top-0 h-1 w-8 rounded-full bg-black  transition-all group-open:top-2 group-open:rotate-45"></div>
-//   <div className="mt-1 h-1 w-8 rounded-full bg-black opacity-100 transition-all group-open:opacity-0"></div>
-//   <div className="relative top-0 mt-1 h-1 w-8 rounded-full bg-black  transition-all group-open:-top-2 group-open:-rotate-45"></div>
-// </div>

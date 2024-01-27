@@ -27,6 +27,20 @@ module.exports = {
         rubic: ["var(--font-rubic)"],
         comfortaa: ["var(--font-comfortaa)"],
       },
+        'mobile': '375px',
+        // => @media (min-width: 375px) { ... }
+
+        'tablet': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
+    },
+    extend: {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -79,9 +93,10 @@ module.exports = {
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-up": "accordion-up 0.1s ease-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 };
+}
