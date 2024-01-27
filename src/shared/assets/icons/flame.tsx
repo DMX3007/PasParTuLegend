@@ -3,7 +3,8 @@ const FlameIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     width={24}
     height={24}
-    fill="none"
+    fill="transparent"
+    className={"group-hover:fill-[#773d06] transition-all ease-in-out duration-300 "}
     {...props}
   >
     <path
@@ -31,8 +32,10 @@ const FlameIcon = (props: React.SVGProps<SVGSVGElement>) => (
       d="M5.883 7.875a.155.155 0 0 1-.126-.022.196.196 0 0 1-.08-.113c-.026-.098-.006-.15.006-.23.027-.17-.063-.291-.24-.391a.86.86 0 0 1-.13.529.538.538 0 0 0 0 .622c.038.054.086.1.139.135a.459.459 0 0 0 .172.07.415.415 0 0 0 .34-.091.458.458 0 0 0 .114-.147.522.522 0 0 0 .053-.186.57.57 0 0 0-.018-.2.399.399 0 0 0-.12-.195.196.196 0 0 1-.013.137.155.155 0 0 1-.097.082Z"
     />
     <path
-      fill="url(#e)"
+      // fill="url(#e)"
       className="core-flame"
+      stroke="#773d06"
+      strokeWidth={2}
       d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.001 7.001 0 0 1-11.95 4.95A7 7 0 0 1 5 15c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5Z"
     />
     <defs>
@@ -44,8 +47,8 @@ const FlameIcon = (props: React.SVGProps<SVGSVGElement>) => (
         y2={18.528}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#773d06" />
-        <stop offset={1} stopColor="#773d06" stopOpacity={0.89} />
+        <stop stopColor="transparent" />
+        <stop offset={1} stopColor="transparent" stopOpacity={0.89} />
       </linearGradient>
       <linearGradient
         id="b"
@@ -66,8 +69,8 @@ const FlameIcon = (props: React.SVGProps<SVGSVGElement>) => (
         y2={4.405}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#773d06" />
-        <stop offset={1} stopColor="#773d06" stopOpacity={0.89} />
+        <stop stopColor="transparent" />
+        <stop offset={1} stopColor="transparent" stopOpacity={0.89} />
 
       </linearGradient>
       <linearGradient
@@ -78,8 +81,8 @@ const FlameIcon = (props: React.SVGProps<SVGSVGElement>) => (
         y2={8.467}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#773d06" />
-        <stop offset={1} stopColor="#773d06" stopOpacity={0.89} />
+        <stop stopColor="transparent" />
+        <stop offset={1} stopColor="transparent" stopOpacity={0.89} />
       </linearGradient>
       <linearGradient
         id="e"
@@ -89,8 +92,8 @@ const FlameIcon = (props: React.SVGProps<SVGSVGElement>) => (
         y2={22}
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#773d06" />
-        <stop offset={1} stopColor="#773d06" stopOpacity={0.89} />
+        <stop stopColor="transparent" />
+        <stop offset={1} stopColor="transparent" stopOpacity={0.89} />
       </linearGradient>
     </defs>
   </svg>

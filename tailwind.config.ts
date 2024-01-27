@@ -8,6 +8,9 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  variants: {
+    fill: ["hover", "focus"], // this line does the trick
+  },
   theme: {
     container: {
       center: true,
