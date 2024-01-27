@@ -1,4 +1,4 @@
-import { Info, HelpCircle, Star, Globe, Flame } from 'lucide-react'
+import { Info, Star, Globe } from 'lucide-react'
 import Link from "next/link";
 import FlameIcon from "@/shared/assets/icons/flame"
 import PaspartuLogo from "@/shared/assets/icons/paspartu-logo.png";
@@ -38,7 +38,6 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
                 className={'group rounded-es-2xl rounded-ee-2xl '}
                 text="Горячее"
                 alt={"Горячее"}
-                // back={<Flame className=' hover:' color='#773d06' />}
                 back={<FlameIcon />}
               />
             </Link>
