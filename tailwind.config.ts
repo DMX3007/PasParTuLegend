@@ -1,17 +1,32 @@
+import { comfortaa } from "./src/shared/assets/fonts/fonts";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
+  variants: {
+    fill: ["hover", "focus"], // this line does the trick
+  },
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      screens: {
+        mob: "500px",
+      },
+      fontFamily: {
+        rubic: ["var(--font-rubic)"],
+        comfortaa: ["var(--font-comfortaa)"],
+      },
         'mobile': '375px',
         // => @media (min-width: 375px) { ... }
 
@@ -83,4 +98,5 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+};
 }
