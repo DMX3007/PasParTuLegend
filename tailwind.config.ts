@@ -12,9 +12,6 @@ module.exports = {
     fill: ["hover", "focus"], // this line does the trick
   },
   theme: {
-    screens: {
-      mob: "500px",
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -23,6 +20,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        mob: "500px",
+      },
       fontFamily: {
         rubic: ["var(--font-rubic)"],
         comfortaa: ["var(--font-comfortaa)"],
