@@ -13,8 +13,8 @@ import { MainProps } from "../types/types";
 export const HeroSection = ({ font }: MainProps): JSX.Element => {
 
   return (
-    <div className="bg-[url('./../../shared/assets/pictures/header_bl_back.jpg')] bg-cover bg-center">
-      <div className={"m-auto grid grid-cols-3 gap-10 max-w-7xl"}>
+    <div className="min-w-[450px] bg-[url('./../../shared/assets/pictures/header_bl_back.jpg')] bg-cover bg-center">
+      <div className={"m-auto grid grid-cols-3 gap-10 max-w-7xl text-secondary"}>
         <div className={"flex flex-col justify-between justify-self-center items-center"}>
           <DecorativeImage
             className={"hover:scale-125 justify-self-center rotate-12 shadow-lg shadow-slate-400"}
@@ -23,7 +23,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
             alt="мультипликационное изображение города Париж"
           />
           <div className='hidden mr-6 mob:flex flex-col gap-4'>
-            <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+            <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
               <DecorativeImage
                 src={PaspartuLogo}
                 className={'group rounded-ss-2xl rounded-se-2xl'}
@@ -32,7 +32,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
                 back={<Globe className='group-hover:animate-spin' color='#773d06' />}
               />
             </Link>
-            <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+            <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
               <DecorativeImage
                 src={PaspartuLogo}
                 className={'group rounded-es-2xl rounded-ee-2xl '}
@@ -68,7 +68,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
             alt="мультипликационное изображение города Мале"
           />
           <div className='hidden ml-6 mob:flex flex-col gap-4'>
-            <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+            <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
               <DecorativeImage
                 src={PaspartuLogo}
                 className={'group rounded-ss-2xl rounded-se-2xl'}
@@ -77,7 +77,7 @@ export const HeroSection = ({ font }: MainProps): JSX.Element => {
                 back={<Info className='group-hover:animate-spin' color='#773d06' />}
               />
             </Link>
-            <Link className='opacity-1 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
+            <Link className='opacity-0 transition-opacity ease-linear duration-300 sm:opacity-100' href={AppRouter.about}>
               <DecorativeImage
                 src={PaspartuLogo}
                 className={'group rounded-es-2xl rounded-ee-2xl'}
